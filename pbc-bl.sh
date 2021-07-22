@@ -2,8 +2,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=03:00:00
 #SBATCH --mem=30G
-#SBATCH --output=/home/patelr/slurm-logs/bl-logs/psc-bl.log
-#SBATCH --error=/home/patelr/slurm-errors/bl-errors/psct-bl.errors.log
+#SBATCH --output=/home/patelr/slurm-logs/bl-logs/pbc-bl.log
+#SBATCH --error=/home/patelr/slurm-errors/bl-errors/pbc-bl.errors.log
 # The SumHer paper says it should take 2hrs on 20G, I gave 1.5x just in case, just 1 job
 
 # Debug info
