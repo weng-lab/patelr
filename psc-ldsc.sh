@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --time=03:00:00
+#SBATCH --time=04:00:00
 #SBATCH --mem=30G
 #SBATCH --output=/home/patelr/slurm-logs/bl-logs/psc-ldsc.log
 #SBATCH --error=/home/patelr/slurm-errors/bl-errors/psc-ldsc.error
