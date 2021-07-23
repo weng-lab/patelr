@@ -14,6 +14,7 @@ echo ""
 # Summary stats, tagging files
 SUMSTAT=/data/zusers/patelr/gwas_summary_stats/PSC-summary-statistics.txt
 TAG=/data/zusers/patelr/taggings/eur_w_ld_chr
+LDSC=/home/patelr/ldsc/ldsc.py
 
 # Create temp directory
 echo "Creating temp working dir ..."
@@ -25,7 +26,7 @@ echo ""
 
 # Copy files
 echo "Copying files to temp dir ..."
-cp $SUMSTAT .
+cp $SUMSTAT $LDSC .
 cp -r $TAG
 
 echo "Set up environment ..."
