@@ -2,9 +2,11 @@ library(biomaRt)
 hg19.snp<- useMart(biomart="ENSEMBL_MART_SNP",host="grch37.ensembl.org",path="/biomart/martservice",dataset="hsapiens_snp")
 snp.pos <- getBM(attributes=c("chr_name","chrom_start","refsnp_id"),filters="snp_filter",values=dat[,1],mart=hg19.snp)
 
-fill.snp.pos <-function(snp.info,mart.name){
-if(is.na(snp.info[5])){
-pos.temp <- getBM(attributes=c("chr_name","chrom_start"),filters="snp_synonym_filter",values=line[1],mart=mart.name)
-return paste(pos.temp[1],pos.temp[2],sep=":")
-}
-return snp.info[5]
+fill.snp.pos <- function(snp.info,mart.name){
+  if(is.na(snp.info[7])) {
+    pos.temp <- getBM(attributes=c("chr_name","chrom_start"),filters="snp_synonym_filter",values=snp.info[1],mart=mart.name)
+    return(paste(pos.temp[1],pos.temp[2],sep=":"))
+  }
+  return(snp.info[7])
+  }
+
