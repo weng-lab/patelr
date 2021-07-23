@@ -42,7 +42,7 @@ TAG=$(basename $TAG)
 echo "Running SumHer BL ..."
 echo "Start: " 
 date
-ldsc.py \
+./ldsc.py \
 --h2 $SUMSTAT \
 --ref-ld-chr eur_w_ld_chr/ \
 --w-ld-chr eur_w_ld_chr/ \
