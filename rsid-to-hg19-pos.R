@@ -13,7 +13,7 @@ fill.snp.pos <- function(snp.info,mart.name){
   if(dim(snp.pos)[1]>1){
     snp.pos <- snp.pos[check.numeric(snp.pos[,1]),]
   }
-  return(paste(snp.pos[1],snp.pos[2],sep=":")
+  return(paste(snp.pos[1],snp.pos[2],sep=":"))
   }
 
 dat$SNP <- apply(dat,1,fill.snp.pos,hg19.snp)
